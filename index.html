@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KubeScribe.ai - Automated SRE agent that closes the loop between Kubernetes observability and GitOps remediation">
+    <title>KubeScribe.ai - Automated SRE Agent for Kubernetes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">KubeScribe.ai</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+                <a href="#contact" class="btn-primary">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Automated SRE Agent for
+                    <span class="gradient-text">Kubernetes Remediation</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Close the loop between Kubernetes observability and GitOps remediation. 
+                    Monitor failures, analyze root causes with AWS Bedrock (Claude 3), 
+                    and automatically open Pull Requests with suggested fixes.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-large btn-primary">Start Free Trial</a>
+                    <a href="#features" class="btn btn-large btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-preview">
+                    <div class="code-header">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                        <span class="code-title">remediation-pr.yaml</span>
+                    </div>
+                    <div class="code-content">
+                        <pre><code># KubeScribe AI detected: OOMKilled
+# Root cause: Insufficient memory limits
+# Suggested fix:
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-app
+spec:
+  containers:
+  - name: app
+    resources:
+      limits:
+        memory: "512Mi"  # Increased from 256Mi
+      requests:
+        memory: "256Mi"</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Powerful Features</h2>
+            <p class="section-subtitle">Automated SRE capabilities that bridge observability and remediation</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Failure Detection</h3>
+                    <p>Automatically monitors Kubernetes clusters for critical failures like OOMKilled, CrashLoopBackOff, and other pod issues in real-time.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI Root Cause Analysis</h3>
+                    <p>Leverages AWS Bedrock with Claude 3 to intelligently analyze failure patterns and identify the root cause of issues.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Automated Remediation</h3>
+                    <p>Automatically opens Pull Requests in your Infrastructure repository with suggested fixes, ready for review and deployment.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>GitOps Integration</h3>
+                    <p>Seamlessly closes the loop between observability and remediation by integrating directly with your GitOps workflow.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Continuous Monitoring</h3>
+                    <p>Continuously watches your clusters, providing proactive detection and remediation before issues escalate.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Self-Healing Infrastructure</h3>
+                    <p>Transform your Kubernetes infrastructure into a self-healing system that automatically proposes fixes for detected failures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Why KubeScribe.ai?</h2>
+                    <p>
+                        KubeScribe AI is an automated SRE agent designed to close the loop between 
+                        Kubernetes observability and GitOps remediation. It eliminates the manual 
+                        gap between detecting failures and implementing fixes.
+                    </p>
+                    <p>
+                        When your cluster experiences failures like OOMKilled or CrashLoopBackOff, 
+                        KubeScribe AI automatically detects the issue, uses AWS Bedrock (Claude 3) 
+                        to analyze the root cause, and opens a Pull Request in your Infrastructure 
+                        repository with the suggested fix—all without human intervention.
+                    </p>
+                    <ul class="benefits-list">
+                        <li>✓ Automatically detect and remediate Kubernetes failures</li>
+                        <li>✓ Reduce MTTR (Mean Time To Recovery) significantly</li>
+                        <li>✓ Leverage AI-powered root cause analysis with Claude 3</li>
+                        <li>✓ Integrate seamlessly with your existing GitOps workflow</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Automate Your Kubernetes Remediation?</h2>
+                <p>Join teams using KubeScribe.ai to close the observability-remediation loop</p>
+                <form class="cta-form" onsubmit="event.preventDefault(); alert('Thank you for your interest! We\'ll be in touch soon.');">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-large btn-primary">Get Started</button>
+                </form>
+                <p class="cta-note">Free 14-day trial • No credit card required</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo">KubeScribe.ai</span>
+                    <p>Automated SRE agent for Kubernetes</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#about">About</a>
+                        <a href="#contact">Pricing</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <a href="#">Documentation</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Support</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="#">About Us</a>
+                        <a href="#">Contact</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 KubeScribe.ai. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
+
